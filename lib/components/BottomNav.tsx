@@ -4,7 +4,7 @@ import Link from "next/link";
 const BottomNav: React.FC = () => {
   return (
     <nav className="bottom-nav">
-      <Link href="/newsDynamicTry" className="nav-item">
+      <Link href="/news" className="nav-item">
         חדשות
       </Link>
       <Link href="/wizard" className="nav-item">
