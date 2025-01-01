@@ -15,8 +15,8 @@ export function getEmailTransport() {
 export async function sendEmail(msg: string) {
   const transport = getEmailTransport();
   const message = {
-    from: EMAIL_ADDRESS,
-    to: EMAIL_ADDRESS,
+    from: process.env.EMAIL_ADDRESS,
+    to: process.env.EMAIL_ADDRESS,
     subject: "פניית פגיעה ברשת לטיפול",
     text: msg,
     html: `<p>${msg}</p>`,
