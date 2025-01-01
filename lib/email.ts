@@ -5,8 +5,8 @@ export function getEmailTransport() {
   const transport = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: EMAIL_ADDRESS,
-      pass: EMAIL_PASSWORD,
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD,
     },
   } as TransportOptions);
   return transport;
