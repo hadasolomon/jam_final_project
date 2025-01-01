@@ -34,8 +34,8 @@ export async function sendEmail(msg: string) {
 export async function sendEmailWithAttachment(msg: string, attachment: File | null) {
   const transport = getEmailTransport();
   const message = {
-    from: EMAIL_ADDRESS,
-    to: EMAIL_ADDRESS,
+    from: process.env.EMAIL_ADDRESS,
+    to: process.env.EMAIL_ADDRESS,
     subject: "פניית פגיעה ברשת לטיפול",
     text: msg,
     html: `<p>${msg}</p>`,
